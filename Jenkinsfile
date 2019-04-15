@@ -3,8 +3,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''echo "apt-get update"
-./jenkins/scripts/test.sh'''
+        sh '''def singlyQuoted = \'Hello\'
+def doublyQuoted = "World"
+def username = \'Jenkins\'
+echo \'Hello Mr. ${username}\'
+echo "I said, Hello Mr. ${username}"'''
       }
     }
   }
