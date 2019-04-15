@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''echo "apt-get update"
-sh "ls -al"'''
+./jenkins/scripts/test.sh'''
       }
     }
   }
