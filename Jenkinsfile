@@ -3,14 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''bash \'\'\'
-   #!/bin/bash
-   echo "hello world"
-\'\'\''''
+        sh 'npm install'
       }
     }
-  }
-  environment {
-    init_start_e2e_instances = 'true'
   }
 }
