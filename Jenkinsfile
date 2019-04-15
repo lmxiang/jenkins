@@ -3,11 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''def singlyQuoted = \'Hello\'
-def doublyQuoted = "World"
-def username = \'Jenkins\'
-echo \'Hello Mr. ${username}\'
-echo "I said, Hello Mr. ${username}"'''
+        sh 'echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"'
       }
     }
   }
