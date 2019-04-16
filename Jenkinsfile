@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sh cmd: \'printenv\''
+        sh 'sh(\'printenv\')'
       }
     }
   }
